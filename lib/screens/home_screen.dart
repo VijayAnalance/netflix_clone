@@ -1,5 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:get/instance_manager.dart';
+import 'package:netflix1/screens/screens.dart';
+import 'package:go_router/go_router.dart';
+import 'package:get/get.dart';
 import '/cubits/cubits.dart';
 import '/data/data.dart';
 import '/widgets/widgets.dart';
@@ -39,7 +43,11 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.grey[850],
         child: const Icon(Icons.cast),
-        onPressed: () => print('Cast'),
+        // onPressed: () => print('Cast'),
+        onPressed: () {
+          // Get.rootDelegate.toNamed('/otherScreen?name=vijay');
+          context.go('/otherScreen?name=vijay');
+        },
       ),
       appBar: PreferredSize(
         preferredSize: Size(screenSize.width, 50.0),

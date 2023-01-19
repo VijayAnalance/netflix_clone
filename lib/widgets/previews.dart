@@ -71,7 +71,7 @@ class Previews extends StatelessWidget {
                         height: 130.0,
                         width: 130.0,
                         decoration: BoxDecoration(
-                          gradient: const LinearGradient(
+                          gradient: LinearGradient(
                             colors: [
                               Colors.black87,
                               Colors.black45,
